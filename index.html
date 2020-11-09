@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+
+		<title>Latitute - Visualization Dashboard</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="Resources/assets/css/main.css" />
+		<style>
+			.box {
+ 				min-height: 50px;
+  				padding: 5px;
+  				margin: 5px;
+  				font-weight: 800;
+  			color: #fff;
+}		</style>
+	</head>
+
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="container">
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="index.html">Latitute</a></h1>
+					</div>
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+						<!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+							<li>
+								<a href="#">Plots</a>
+								<ul>
+									<li><a href="./Images/Fig1.png">Max Temperature</a></li>
+                            		<li><a href="./Images/Fig2.png">Humidity</a></li>
+                            		<li><a href="./Images/Fig3.png">Cloudiness</a></li>
+                                	<li><a href="./Images/Fig4.png">Wind Speed</a></li>
+								</ul>
+							</li>
+							<li><a href="comparision.html">Comparision</a></li>
+							<li><a href="data.html">Data</a></li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+
+			<!-- Main -->
+			<div id="main-wrapper">
+				<div class= "container">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Content -->
+							<div id="content">
+								<h2>Summary: Latitute vs. X</h2>
+								<hr>
+								<a href="./Images/Fig1.png" class="image size"><img src="./Images/Fig1.png" alt="Max Temperature" /></a>
+								<p> The purpose of this project was to analyze how weather changes as you get closer to
+									the equator. To accomplish this anlysis, we first pulled data from the OpenWeatherMap API
+									to assemgle a dataset on over 500 cities.</p>
+								<p>	After assembling the dataset, we used Matplotlib to plot various aspects of the weather
+									vs. latitute. Factors we looked at included: temperature, cloudiness, wind speed, and
+									humidity. This site provides the source data and visualizations created as part of the
+									analysis, as as explanations and descriptions of any trends and correlations witnessed.</p>
+
+							</div>
+						</div>
+
+						<div class="col-md-6 col-md-5">
+							<h2>Visualizations</h2>
+							<hr>
+							<div class="row">
+								<div class="col-sm-6 col-md-5"><a href="./Images/Fig1.png"><img class="image_fit" src="./Images/Fig1.png" /></a></div>
+								<div class="col-sm-6 col-md-5"><a href="./Images/Fig2.png"><img class="image_fit" src="./Images/Fig2.png" /></a></div>
+
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-6 col-md-5"><a href="./Images/Fig3.png"><img class="image_fit" src="./Images/Fig3.png" /></a></div>
+								<div class="col-sm-6 col-md-5"><a href="./Images/Fig4.png"><img class="image_fit" src="./Images/Fig4.png" /></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+
+		<script src="Resources/assets/js/jquery.min.js"></script>
+		<script src="Resources/assets/js/jquery.dropotron.min.js"></script>
+		<script src="Resources/assets/js/browser.min.js"></script>
+		<script src="Resources/assets/js/breakpoints.min.js"></script>
+		<script src="Resources/assets/js/util.js"></script>
+		<script src="Resources/assets/js/main.js"></script>
+
+		<script>
+			var menu = document.getElementById("nav");
+			menu.addEventListener("change", generateData);
+
+			function generateData(event) {
+			  if (menu.value == '1') {
+				alert(1);
+			  } else if (menu.value == '2') {
+				alert(2);
+			  } else if (menu.value == '3') {
+				alert(3);
+			  }
+			}
+		</script>
+	</body>
+</html>
